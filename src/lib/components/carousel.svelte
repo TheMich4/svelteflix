@@ -1,9 +1,19 @@
 <script lang="ts">
 	import { media } from '$lib/api';
 	import type { MovieListResult } from '$lib/types';
+	import type { View } from '$lib/views';
 
 	export let movies: MovieListResult[];
+	export let view: View;
+	export let href: string;
 </script>
+
+<div class="column text-xl">
+	{view.title}
+	{#if href}
+		<a {href}>see all</a>
+	{/if}
+</div>
 
 <div class="carousel flex h-40 gap-4 overflow-x-scroll snap-mandatory">
 	{#each movies as movie}
