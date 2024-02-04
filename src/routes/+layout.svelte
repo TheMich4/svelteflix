@@ -26,6 +26,12 @@
 </footer>
 
 <style>
+	main {
+		height: 0;
+		flex: 1;
+		overflow: hidden;
+	}
+
 	nav {
 		max-width: var(--column);
 		padding: 0 var(--side);

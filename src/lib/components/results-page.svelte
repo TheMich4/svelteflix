@@ -50,7 +50,7 @@
 
 <p>showing items {a} - {b}</p>
 
-<div class="h-[500px] overflow-y-auto" on:scroll={handleScroll} bind:this={viewport}>
+<div class="overflow-y-auto" on:scroll={handleScroll} bind:this={viewport}>
 	<div
 		class="grid grid-cols-4 w-full gap-4"
 		bind:this={results}
