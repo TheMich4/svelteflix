@@ -57,7 +57,7 @@
 	>
 		{#each movies.slice(a, b) as movie}
 			<a href="/movies/{movie.id}" class="w-full aspect-[2/3]">
-				<img alt="movie.title" src={media(movie.poster_path, 500)} class="w-full" /></a
+				<img alt={movie.title} src={media(movie.poster_path, 500)} class="w-full" /></a
 			>
 		{/each}
 	</div>
