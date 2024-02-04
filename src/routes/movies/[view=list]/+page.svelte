@@ -10,5 +10,8 @@
 	<ResultsPage
 		movies={data.movies}
 		next={data.nextPage ? `/movies/${data.view}?page=${data.nextPage}` : null}
+		on:end={() => {
+			console.log('end');
+		}}
 	/>
 </div>
