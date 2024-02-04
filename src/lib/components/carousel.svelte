@@ -17,7 +17,7 @@
 
 <div class="carousel flex h-40 gap-4 overflow-x-scroll snap-mandatory">
 	{#each movies as movie}
-		<a href="/movie/{movie.id}" class="h-full">
+		<a href="/movies/{movie.id}" class="h-full">
 			<img alt={movie.title} src={media(movie.poster_path, 500)} class="h-full" /></a
 		>
 	{/each}
