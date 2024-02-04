@@ -1,4 +1,5 @@
 <script lang="ts">
+	import Carousel from '$lib/components/carousel.svelte';
 	import Hero from './hero.svelte';
 
 	export let data;
@@ -48,6 +49,14 @@
 		{/each}
 	</dl>
 </div>
+
+{#if data.movie.recommendations.results.length > 0}
+	<Carousel
+		movies={data.movie.recommendations.results}
+		href={null}
+		view={{ title: 'You might also like...', endpoint: '' }}
+	/>
+{/if}
 
 <style>
 	.grid {

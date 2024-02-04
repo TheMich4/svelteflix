@@ -5,7 +5,7 @@
 
 	export let movies: MovieListResult[];
 	export let view: View;
-	export let href: string;
+	export let href: string | null;
 </script>
 
 <div class="column text-xl">
