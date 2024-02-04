@@ -1,4 +1,6 @@
 <script>
+	import { page } from '$app/stores';
+
 	import '../styles.css';
 	import logo from '$lib/images/logo.svg';
 	import tmdb from '$lib/images/tmdb.svg';
@@ -14,7 +16,7 @@
 	</div>
 </nav>
 
-<main>
+<main class:infinite={$page.data.infinite}>
 	<slot />
 </main>
 
@@ -26,7 +28,7 @@
 </footer>
 
 <style>
-	main {
+	main.infinite {
 		height: 0;
 		flex: 1;
 		overflow: hidden;

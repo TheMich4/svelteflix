@@ -13,6 +13,7 @@ export async function load({ fetch, params, url }) {
 		endpoint: view.endpoint,
 		movies: data.results,
 		nextPage: data.page < data.total_pages ? data.page + 1 : null,
-		view
+		view: params.view,
+		infinite: true
 	};
 }
